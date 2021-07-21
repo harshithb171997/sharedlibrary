@@ -1,0 +1,18 @@
+def call(String username = 'null', String designation = 'null' ) {
+  echo "This is shared library greetUser: ${username}"
+  pipeline {
+    environment {
+      USER_NAME = "${username}"
+      DESG = "${designation}"
+    }
+    agent any 
+    stages {
+      stage ("shared-library") {
+        steps {
+          echo "Bye $USER_NAME, How are you !"
+          echo "Designation: $DESG"
+    }
+      }
+    }
+  }
+}
