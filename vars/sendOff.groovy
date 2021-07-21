@@ -9,7 +9,7 @@ def call(String username = 'null', String designation = 'null' ) {
     stages {
       stage ("shared-library") {
         steps {
-          echo "Bye $USER_NAME, How are you !"
+          echo "Bye $USER_NAME, nice to meet you !"
           echo "Designation: $DESG"
     }
       }
